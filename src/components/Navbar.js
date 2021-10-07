@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { menuData } from "../data/ManuData";
+import { Button } from "./Button";
 
 const Nav = styled.nav`
   height: 60px;
@@ -33,10 +34,17 @@ const MenuBars = styled.i``;
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  margin-right: -48px;
 `;
 
 const NavMenuLinks = styled(Link)`
   ${NavLink}
+`;
+
+const NavBtn = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
 `;
 
 function Navbar() {
@@ -51,6 +59,11 @@ function Navbar() {
           </NavMenuLinks>
         ))}
       </NavMenu>
+      <NavBtn>
+        <Button to="/contact" primary="true">
+          Contact Us
+        </Button>
+      </NavBtn>
     </Nav>
   );
 }
