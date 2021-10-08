@@ -3,12 +3,13 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { menuData } from "../data/ManuData";
 import { Button } from "./Button";
+import { FaBars } from "react-icons/fa";
 
 const Nav = styled.nav`
   height: 60px;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   z-index: 100;
   position: fixed;
   width: 100%;
@@ -30,11 +31,30 @@ const Logo = styled(Link)`
   font-style: italic;
 `;
 
-const MenuBars = styled.i``;
+const MenuBars = styled(FaBars)`
+  display: none;
+  color: white;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    cursor: pointer;
+    //position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    right: 0;
+    //transform: translate(-50%, 25%);
+  }
+`;
+
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -48px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NavMenuLinks = styled(Link)`
@@ -45,6 +65,10 @@ const NavBtn = styled.div`
   display: flex;
   align-items: center;
   margin-right: 24px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 function Navbar() {
