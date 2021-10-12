@@ -1,3 +1,8 @@
+import ImageOne from "../images/house1.jpg";
+import ImageTwo from "../images/house2.jpg";
+import ImageThree from "../images/house3.jpg";
+import ImageFour from "../images/house3.jpg";
+
 export const SliderData = [
   {
     title: "Luxtry Villa in Bali, Indonesia",
@@ -33,29 +38,29 @@ export const SliderData = [
   },
 ];
 
-export const SliderDataTwo = [
-  {
-    title: "House in Las Vegas, Nevada",
-    price: "$4,280,000",
-    path: "/homes",
-    label: "View Home",
-    image: ImageFive,
-    alt: "House",
-  },
-  {
-    title: "House in Houston, Texas",
-    price: "$2,800,00",
-    path: "/homes",
-    label: "View Home",
-    image: ImageSix,
-    alt: "House",
-  },
-  {
-    title: "House in Alajuela, Costa Rica",
-    price: "$8,280,000",
-    path: "/homes",
-    label: "View Home",
-    image: ImageSeven,
-    alt: "House",
-  },
-];
+// export const SliderDataTwo = [
+//   {
+//     title: "House in Las Vegas, Nevada",
+//     price: "$4,280,000",
+//     path: "/homes",
+//     label: "View Home",
+//     image: ImageFive,
+//     alt: "House",
+//   },
+//   {
+//     title: "House in Houston, Texas",
+//     price: "$2,800,00",
+//     path: "/homes",
+//     label: "View Home",
+//     image: ImageSix,
+//     alt: "House",
+//   },
+//   {
+//     title: "House in Alajuela, Costa Rica",
+//     price: "$8,280,000",
+//     path: "/homes",
+//     label: "View Home",
+//     image: ImageSeven,
+//     alt: "House",
+//   },
+// ];
