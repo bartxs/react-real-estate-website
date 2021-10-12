@@ -32,3 +32,30 @@ export const SliderData = [
     alt: "House",
   },
 ];
+
+export const SliderDataTwo = [
+  {
+    title: "House in Las Vegas, Nevada",
+    price: "$4,280,000",
+    path: "/homes",
+    label: "View Home",
+    image: ImageFive,
+    alt: "House",
+  },
+  {
+    title: "House in Houston, Texas",
+    price: "$2,800,00",
+    path: "/homes",
+    label: "View Home",
+    image: ImageSix,
+    alt: "House",
+  },
+  {
+    title: "House in Alajuela, Costa Rica",
+    price: "$8,280,000",
+    path: "/homes",
+    label: "View Home",
+    image: ImageSeven,
+    alt: "House",
+  },
+];
