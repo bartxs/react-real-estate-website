@@ -31,7 +31,22 @@ const DropdownMenu = styled.div`
   margin-bottom: 4rem;
 `;
 
-const DropdownLink = styled(Link)``;
+const DropdownLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5 rem;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &::hover {
+    color: #000d1a;
+  }
+`;
+
 const BtnWrap = styled.div``;
 
 const Dropdown = () => {
