@@ -23,7 +23,14 @@ const DropdownContainer = styled.div`
 const Icon = styled.div``;
 const CloseIcon = styled(FaTimes)``;
 const DropdownWrapper = styled.div``;
-const DropdownMenu = styled.div``;
+const DropdownMenu = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 80px);
+  text-align: center;
+  margin-bottom: 4rem;
+`;
+
 const DropdownLink = styled(Link)``;
 const BtnWrap = styled.div``;
 
