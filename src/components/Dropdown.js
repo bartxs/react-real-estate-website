@@ -29,7 +29,11 @@ const Icon = styled.div`
   cursor: pointer;
   outline: none;
 `;
-const CloseIcon = styled(FaTimes)``;
+
+const CloseIcon = styled(FaTimes)`
+  color: #0001da;
+`;
+
 const DropdownWrapper = styled.div``;
 const DropdownMenu = styled.div`
   display: grid;
@@ -37,6 +41,10 @@ const DropdownMenu = styled.div`
   grid-template-rows: repeat(4, 80px);
   text-align: center;
   margin-bottom: 4rem;
+
+  @media screen and (max-width: 480px) {
+    grid-template-rows: repeat(4, 60px);
+  }
 `;
 
 const DropdownLink = styled(Link)`
@@ -55,7 +63,10 @@ const DropdownLink = styled(Link)`
   }
 `;
 
-const BtnWrap = styled.div``;
+const BtnWrap = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const Dropdown = () => {
   return (
@@ -65,11 +76,11 @@ const Dropdown = () => {
       </Icon>
       <DropdownWrapper>
         <DropdownMenu>
-          {menuData.map((item, index) => {
+          {menuData.map((item, index) => (
             <DropdownLink to={item.link} key={index}>
               {item.link}
-            </DropdownLink>;
-          })}
+            </DropdownLink>
+          ))}
         </DropdownMenu>
         <BtnWrap>
           <Button primary="true" round="true" big="true" to="/contact">
