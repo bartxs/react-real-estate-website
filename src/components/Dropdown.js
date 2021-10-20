@@ -8,7 +8,7 @@ import { FaTimes } from "react-icons/fa";
 const DropdownContainer = styled.div`
   position: fixed;
   z-index: 999;
-  width: 100%auto;
+  width: 100%;
   height: 100%;
   background: #cd853f;
   display: grid;
@@ -16,8 +16,8 @@ const DropdownContainer = styled.div`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: 1;
-  top: 0;
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")}; ;
 `;
 
 const Icon = styled.div`
@@ -68,17 +68,17 @@ const BtnWrap = styled.div`
   justify-content: center;
 `;
 
-const Dropdown = () => {
+const Dropdown = ({ isOpen, toggle }) => {
   return (
-    <DropdownContainer>
-      <Icon>
+    <DropdownContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <DropdownWrapper>
         <DropdownMenu>
           {menuData.map((item, index) => (
             <DropdownLink to={item.link} key={index}>
-              {item.link}
+              {item.title}
             </DropdownLink>
           ))}
         </DropdownMenu>

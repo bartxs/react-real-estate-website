@@ -70,11 +70,11 @@ const NavBtn = styled.div`
   }
 `;
 
-function Navbar() {
+function Navbar({ toggle }) {
   return (
     <Nav>
       <Logo to="/">ELIX</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
