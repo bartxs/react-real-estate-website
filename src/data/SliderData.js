@@ -1,7 +1,7 @@
-import ImageOne from "../images/house1.jpg";
-import ImageTwo from "../images/house2.jpg";
-import ImageThree from "../images/house3.jpg";
-import ImageFour from "../images/house4.jpg";
+import ImageOne from "../images/house-1.jpg";
+import ImageTwo from "../images/house-2.jpg";
+import ImageThree from "../images/house-3.jpg";
+import ImageFour from "../images/house-4.jpg";
 
 export const SliderData = [
   {
@@ -22,14 +22,14 @@ export const SliderData = [
   },
   {
     title: "House in Calabassas, California",
-    price: "$8,280,000",
+    price: "$7,280,000",
     path: "/homes",
     label: "View Home",
     image: ImageThree,
     alt: "House",
   },
   {
-    title: "House in Houston, Texas",
+    title: "House in Tampa, Floryda",
     price: "$6,280,000",
     path: "/homes",
     label: "View Home",

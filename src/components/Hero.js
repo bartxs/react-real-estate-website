@@ -78,14 +78,14 @@ const HeroContent = styled.div`
     font-size: clamp(1rem, 8vw, 2rem);
     font-weight: 400;
     text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 3px 3px 2px #111;
     text-align: left;
     margin-bottom: 0.8rem;
   }
 
   p {
     margin-bottom: 2rem;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 2px #111;
   }
 `;
 
@@ -114,7 +114,7 @@ const arrowButtons = css`
   transition: 0.3s;
 
   &:hover {
-    background: #cd853f;
+    background: gray;
     transform: scale(1.05);
   }
 `;
@@ -132,18 +132,18 @@ const Hero = ({ slides }) => {
   const length = slides.length;
   const timeout = useRef(null);
 
-  // useEffect(() => {
-  //   const nextSlide = () => {
-  //     setCurrent((current) => (current === length - 1 ? 0 : current + 1));
-  //   };
-  //   timeout.current = setTimeout(nextSlide, 3000);
+  useEffect(() => {
+    const nextSlide = () => {
+      setCurrent((current) => (current === length - 1 ? 0 : current + 1));
+    };
+    timeout.current = setTimeout(nextSlide, 3000);
 
-  //   return function () {
-  //     if (timeout.current) {
-  //       clearTimeout(timeout.current);
-  //     }
-  //   };
-  // }, [current, length]);
+    return function () {
+      if (timeout.current) {
+        clearTimeout(timeout.current);
+      }
+    };
+  }, [current, length]);
 
   const nextSlide = () => {
     if (timeout.current) {

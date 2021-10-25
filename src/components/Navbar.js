@@ -13,7 +13,7 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: black;
+  //background: rgba(108, 108, 108, 0.3);
 `;
 
 const NavLink = css`
@@ -27,6 +27,7 @@ const NavLink = css`
 `;
 
 const Logo = styled(Link)`
+  text-shadow: 2px 2px 2px #111;
   ${NavLink}
   font-style: italic;
 `;
@@ -51,6 +52,7 @@ const NavMenu = styled.div`
   display: flex;
   align-items: center;
   margin-right: -48px;
+  text-shadow: 2px 2px 2px #111;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -74,7 +76,7 @@ const NavBtn = styled.div`
 function Navbar({ toggle }) {
   return (
     <Nav>
-      <Logo to="/">ELIX</Logo>
+      <Logo to="/">REAL ESTATE</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
